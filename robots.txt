@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://orkestic.github.io/orkestic-home/sitemap.xml
+Sitemap: https://orkestic.com/sitemap.xml
