@@ -560,12 +560,16 @@
       button.animate([{transform:'scale(1)', boxShadow:'0 0 0 0 #39bfff55, 0 4px 20px #1488e855'}, {transform:'scale(1.13)', boxShadow:'0 0 0 12px #39bfff22, 0 4px 36px #25bfffdd'}, {transform:'scale(1)', boxShadow:'0 0 0 0 #39bfff55, 0 4px 20px #1488e855'}], {duration:2200, iterations:Infinity});
     }
     const label = document.getElementById('orkestic-chat-label');
+    const mobileChat = window.matchMedia('(max-width: 767px)');
+    const updateLabel = () => { label.hidden = mobileChat.matches || !panel.hidden; };
+    updateLabel();
+    mobileChat.addEventListener('change', updateLabel);
     label.addEventListener('click', () => button.click());
     button.addEventListener('click', () => {
       const opening = panel.hidden;
       if (opening && !frame.src) frame.src = frame.dataset.src;
       panel.hidden = !opening;
-      label.hidden = opening;
+      updateLabel();
       button.setAttribute('aria-expanded', String(opening));
       button.setAttribute('aria-label', opening ? 'Cerrar asistente de Orkestic' : 'Abrir asistente de Orkestic');
     });
