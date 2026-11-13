@@ -460,22 +460,22 @@
 <details class="border-b border-white/[.1] py-5"><summary class="cursor-pointer font-medium">¿Qué herramientas no incluye Basic?</summary><p class="muted text-sm leading-relaxed mt-3">Basic no incluye Broadcast Hub, reuniones Zoom, Web Shop, Wallet Passes ni el módulo Sales. Pro abre todas las herramientas de la plataforma; las integraciones requieren la configuración y las cuentas de los proveedores correspondientes.</p></details>
 </div></div></section>
 
-    
-    <section id="trayectoria" class="section-line" aria-label="Nuestra trayectoria" style="background:#0a1027;padding:76px 20px">
-      <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:44px 24px;text-align:center">
-        <div style="flex:1 1 240px;min-width:0">
-          <p style="margin:0 0 4px;color:#b9c7e4;font-size:17px">Desde</p>
-          <p aria-label="2016" style="margin:0;color:#fff;font-size:clamp(52px,8vw,72px);font-weight:800;line-height:1.1"><span data-count-target="2016" aria-hidden="true">2016</span></p>
-          <p style="margin:12px auto 0;max-width:260px;color:#b9c7e4;font-size:17px;line-height:1.5">Asesorando negocios digitales</p>
+    <section id="trayectoria" class="section-line" aria-label="Nuestra trayectoria" style="background:#0a1225;padding:clamp(30px,5vw,54px) 16px">
+      <div style="max-width:980px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));text-align:center">
+        <div style="min-width:0;padding:0 clamp(6px,2vw,24px)">
+          <p style="margin:0 0 6px;color:#8da5cb;font-size:clamp(10px,1.1vw,13px);line-height:1.2">Desde</p>
+          <p aria-label="2016" style="margin:0;color:#f4f8ff;font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,44px);font-weight:700;line-height:1.1;letter-spacing:-.035em"><span data-count-target="2016" data-count-start="2006" aria-hidden="true">2016</span></p>
+          <p style="margin:9px auto 0;max-width:245px;color:#a9bad5;font-size:clamp(10px,1.05vw,14px);line-height:1.4">Asesorando negocios digitales</p>
         </div>
-        <div style="flex:1 1 240px;min-width:0">
-          <p style="margin:0 0 4px;color:#b9c7e4;font-size:17px">Desde</p>
-          <p aria-label="2022" style="margin:0;color:#fff;font-size:clamp(52px,8vw,72px);font-weight:800;line-height:1.1"><span data-count-target="2022" aria-hidden="true">2022</span></p>
-          <p style="margin:12px auto 0;max-width:260px;color:#b9c7e4;font-size:17px;line-height:1.5">Formando profesionales en IA</p>
+        <div style="min-width:0;padding:0 clamp(6px,2vw,24px);border-left:1px solid #7197ff30">
+          <p style="margin:0 0 6px;color:#8da5cb;font-size:clamp(10px,1.1vw,13px);line-height:1.2">Desde</p>
+          <p aria-label="2022" style="margin:0;color:#f4f8ff;font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,44px);font-weight:700;line-height:1.1;letter-spacing:-.035em"><span data-count-target="2022" data-count-start="2012" aria-hidden="true">2022</span></p>
+          <p style="margin:9px auto 0;max-width:245px;color:#a9bad5;font-size:clamp(10px,1.05vw,14px);line-height:1.4">Formando profesionales en IA</p>
         </div>
-        <div style="flex:1 1 240px;min-width:0">
-          <p aria-label="Más de 6,000" style="margin:29px 0 0;color:#fff;font-size:clamp(52px,8vw,72px);font-weight:800;line-height:1.1"><span data-count-target="6000" aria-hidden="true">6,000</span><span aria-hidden="true">+</span></p>
-          <p style="margin:12px auto 0;max-width:330px;color:#b9c7e4;font-size:17px;line-height:1.5">Profesionales han aprendido a configurar sistemas de IA con nosotros</p>
+        <div style="min-width:0;padding:0 clamp(6px,2vw,24px);border-left:1px solid #7197ff30">
+          <p style="margin:0 0 6px;color:#8da5cb;font-size:clamp(10px,1.1vw,13px);line-height:1.2">Más de</p>
+          <p aria-label="Más de 6,000" style="margin:0;color:#f4f8ff;font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,4vw,44px);font-weight:700;line-height:1.1;letter-spacing:-.035em"><span data-count-target="6000" data-count-start="5900" aria-hidden="true">6,000</span><span aria-hidden="true">+</span></p>
+          <p style="margin:9px auto 0;max-width:270px;color:#a9bad5;font-size:clamp(10px,1.05vw,14px);line-height:1.4">Profesionales han aprendido a configurar sistemas de IA con nosotros</p>
         </div>
       </div>
     </section>
@@ -487,14 +487,14 @@
         const observer = new IntersectionObserver(entries => {
           if (!entries.some(entry => entry.isIntersecting)) return;
           observer.disconnect();
-          const start = performance.now();
-          const duration = 1600;
+          const started = performance.now();
           const animate = now => {
-            const progress = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
+            const progress = Math.min((now - started) / 1600, 1);
+            const easing = 1 - Math.pow(1 - progress, 2);
             counters.forEach(counter => {
               const target = Number(counter.dataset.countTarget);
-              const value = Math.round(target * eased);
+              const initial = Number(counter.dataset.countStart);
+              const value = Math.round(initial + (target - initial) * easing);
               counter.textContent = target >= 6000 ? value.toLocaleString('en-US') : String(value);
             });
             if (progress < 1) requestAnimationFrame(animate);
