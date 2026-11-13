@@ -55,6 +55,8 @@
   .hero-stage #hero-description{font-size:12px;line-height:1.4}
 }
 
+.language-switch{display:flex;align-items:center;gap:6px;white-space:nowrap;font-size:12px;font-weight:700;color:#9daec5}.language-switch a[aria-current="page"]{color:#72eaff}.language-switch a:hover{color:#fff}
+
 #planes .plan-includes{margin-top:24px;border-top:1px solid #7197ff35;border-bottom:1px solid #7197ff35}
 #planes .plan-includes>summary{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;cursor:pointer;list-style:none;color:#f2fbff;background:#18324d;border:1px solid #7fcdff66;border-radius:8px;font-size:17px;font-weight:700}
 #planes .plan-includes>summary::-webkit-details-marker{display:none}
