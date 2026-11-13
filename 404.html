@@ -466,6 +466,49 @@
 <details class="border-b border-white/[.1] py-5"><summary class="cursor-pointer font-medium">¿Qué herramientas no incluye Basic?</summary><p class="muted text-sm leading-relaxed mt-3">Basic no incluye Broadcast Hub, reuniones Zoom, Web Shop, Wallet Passes ni el módulo Sales. Pro abre todas las herramientas de la plataforma; las integraciones requieren la configuración y las cuentas de los proveedores correspondientes.</p></details>
 </div></div></section>
 
+    <section id="trayectoria" class="section-line" aria-label="Nuestra trayectoria" style="background:#0a1027;padding:76px 20px">
+      <div style="max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:44px 24px;text-align:center">
+        <div style="flex:1 1 240px;min-width:0">
+          <p style="margin:0 0 4px;color:#b9c7e4;font-size:17px">Desde</p>
+          <p aria-label="2016" style="margin:0;color:#fff;font-size:clamp(52px,8vw,72px);font-weight:800;line-height:1.1"><span data-count-target="2016" aria-hidden="true">2016</span></p>
+          <p style="margin:12px auto 0;max-width:260px;color:#b9c7e4;font-size:17px;line-height:1.5">Asesorando negocios digitales</p>
+        </div>
+        <div style="flex:1 1 240px;min-width:0">
+          <p style="margin:0 0 4px;color:#b9c7e4;font-size:17px">Desde</p>
+          <p aria-label="2022" style="margin:0;color:#fff;font-size:clamp(52px,8vw,72px);font-weight:800;line-height:1.1"><span data-count-target="2022" aria-hidden="true">2022</span></p>
+          <p style="margin:12px auto 0;max-width:260px;color:#b9c7e4;font-size:17px;line-height:1.5">Formando profesionales en IA</p>
+        </div>
+        <div style="flex:1 1 240px;min-width:0">
+          <p aria-label="Más de 6,000" style="margin:29px 0 0;color:#fff;font-size:clamp(52px,8vw,72px);font-weight:800;line-height:1.1"><span data-count-target="6000" aria-hidden="true">6,000</span><span aria-hidden="true">+</span></p>
+          <p style="margin:12px auto 0;max-width:330px;color:#b9c7e4;font-size:17px;line-height:1.5">Profesionales han aprendido a configurar sistemas de IA con nosotros</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      (() => {
+        const section = document.getElementById('trayectoria');
+        const counters = section.querySelectorAll('[data-count-target]');
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+        const observer = new IntersectionObserver(entries => {
+          if (!entries.some(entry => entry.isIntersecting)) return;
+          observer.disconnect();
+          const start = performance.now();
+          const duration = 1600;
+          const animate = now => {
+            const progress = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            counters.forEach(counter => {
+              const target = Number(counter.dataset.countTarget);
+              counter.textContent = Math.round(target * eased).toLocaleString('en-US');
+            });
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+          requestAnimationFrame(animate);
+        }, { threshold: 0.25 });
+        observer.observe(section);
+      })();
+    </script>
+
     <section id="testimonios" data-section="testimonials" class="section-line" aria-labelledby="titulo-testimonios" hidden>
       <div class="container-wide px-4 sm:px-6 md:px-8 lg:px-12 py-20">
         <h2 id="titulo-testimonios" class="text-4xl lg:text-5xl tracking-[-.045em] mb-8">Testimonios</h2>
