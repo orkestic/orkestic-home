@@ -543,7 +543,7 @@
   </script>
 
 <div id="orkestic-chat" style="position:fixed;right:20px;bottom:20px;z-index:9999">
-  <button id="orkestic-chat-label" type="button" aria-controls="orkestic-chat-window" style="position:absolute;right:0;bottom:78px;white-space:nowrap;padding:9px 14px;border:1px solid #5bbefa66;border-radius:12px;background:#0c2242;color:#f4fbff;font:600 14px/1.2 sans-serif;box-shadow:0 5px 20px #0006;cursor:pointer">¿Dudas? Chatea con nosotros</button>
+  <button id="orkestic-chat-label" type="button" aria-controls="orkestic-chat-window" style="position:absolute;right:0;bottom:68px;white-space:nowrap;padding:9px 14px;border:1px solid #5bbefa66;border-radius:12px;background:#0c2242;color:#f4fbff;font:600 14px/1.2 sans-serif;box-shadow:0 5px 20px #0006;cursor:pointer">¿Dudas? Chatea con nosotros</button>
   <div id="orkestic-chat-window" hidden style="position:absolute;bottom:76px;right:0;width:min(380px,calc(100vw - 40px));height:min(580px,calc(100dvh - 115px));background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 50px #0008">
     <iframe title="Asistente de Orkestic" data-src="https://app.orkestic.com/agents/90308589/embed" style="width:100%;height:100%;border:0" allow="clipboard-write"></iframe>
   </div>
@@ -557,7 +557,7 @@
     const panel = document.getElementById('orkestic-chat-window');
     const frame = panel.querySelector('iframe');
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && button.animate) {
-      button.animate([{transform:'scale(1)', boxShadow:'0 0 0 0 #39bfff55, 0 4px 20px #1488e855'}, {transform:'scale(1.045)', boxShadow:'0 0 0 8px #39bfff12, 0 4px 28px #25a9ff99'}, {transform:'scale(1)', boxShadow:'0 0 0 0 #39bfff55, 0 4px 20px #1488e855'}], {duration:3000, iterations:Infinity});
+      button.animate([{transform:'scale(1)', boxShadow:'0 0 0 0 #39bfff55, 0 4px 20px #1488e855'}, {transform:'scale(1.13)', boxShadow:'0 0 0 12px #39bfff22, 0 4px 36px #25bfffdd'}, {transform:'scale(1)', boxShadow:'0 0 0 0 #39bfff55, 0 4px 20px #1488e855'}], {duration:2200, iterations:Infinity});
     }
     const label = document.getElementById('orkestic-chat-label');
     label.addEventListener('click', () => button.click());
