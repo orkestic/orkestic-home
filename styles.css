@@ -50,16 +50,6 @@
 #planes .plan-includes>ul{margin-top:8px;padding-bottom:20px}
 @media(prefers-reduced-motion:reduce){#planes .plan-chevron{transition:none}}
 
-@media (max-width:767px) {
-        #trayectoria { padding:34px 12px !important; }
-        #trayectoria > div { flex-wrap:nowrap !important; gap:8px !important; }
-        #trayectoria > div > div { flex:1 1 0 !important; min-width:0 !important; }
-        #trayectoria > div > div > p:first-child:not([aria-label]) { font-size:12px !important; }
-        #trayectoria > div > div > p[aria-label] { font-size:clamp(24px,7vw,32px) !important; }
-        #trayectoria > div > div:last-child > p[aria-label] { margin-top:20px !important; }
-        #trayectoria > div > div > p:last-child { margin-top:8px !important; font-size:clamp(10px,2.8vw,12px) !important; line-height:1.35 !important; overflow-wrap:anywhere; }
-      }
-
 @keyframes orkestic-chat-pulse { 0%,100% { transform:scale(1); box-shadow:0 0 0 0 #39bfff55,0 4px 20px #1488e855 } 50% { transform:scale(1.13); box-shadow:0 0 0 12px #39bfff22,0 4px 36px #25bfffdd } }
 #orkestic-chat-toggle { animation:orkestic-chat-pulse 2.2s ease-in-out infinite }
 #orkestic-chat-label { position:absolute;right:0;bottom:68px;white-space:nowrap;padding:9px 14px;border:1px solid #5bbefa66;border-radius:12px;background:#0c2242;color:#f4fbff;font:600 14px/1.2 'DM Sans',sans-serif;box-shadow:0 5px 20px #0006;cursor:pointer }
