@@ -493,7 +493,8 @@
             const eased = 1 - Math.pow(1 - progress, 3);
             counters.forEach(counter => {
               const target = Number(counter.dataset.countTarget);
-              counter.textContent = Math.round(target * eased).toLocaleString('en-US');
+              const value = Math.round(target * eased);
+              counter.textContent = target >= 6000 ? value.toLocaleString('en-US') : String(value);
             });
             if (progress < 1) requestAnimationFrame(animate);
           };
