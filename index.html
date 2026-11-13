@@ -630,4 +630,18 @@
   })();
 </script>
 
+<script>
+/* Refresh the external stylesheet after mobile layout changes. */
+(function(){
+  var link = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
+  if (!link) return;
+  try {
+    var url = new URL(link.getAttribute('href'), document.baseURI);
+    if (url.origin === location.origin && /\/styles\.css$/.test(url.pathname)) {
+      url.searchParams.set('v', '20261112-mobile2');
+      link.href = url.href;
+    }
+  } catch (_) {}
+})();
+</script>
 </body></html>
