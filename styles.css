@@ -41,6 +41,20 @@
 
 .integration-track .twilio-wordmark{width:100px;height:32px;flex:0 0 100px;object-fit:contain}
 
+/* Compact, separated hero cards for narrow mobile browsers. */
+@media (max-width:767px){
+  .hero-stage{min-height:340px}
+  .hero-stage .hero-node{width:calc(50% - 9px);min-width:0;max-width:180px;gap:7px;padding:9px 8px;animation-duration:7s}
+  .hero-stage .hero-node .node-icon{width:27px;height:27px;flex:0 0 27px;font-size:15px}
+  .hero-stage .hero-node>span:last-child{min-width:0}
+   .hero-stage .hero-node [class~="text-[10px]"]{font-size:clamp(8px,2.45vw,10px);line-height:1.15;letter-spacing:0}
+  .hero-stage .hero-node .text-sm{font-size:clamp(12px,3.3vw,14px);line-height:1.2}
+  .hero-stage .hero-core{width:88px;height:88px;border-radius:20px;gap:6px}
+  .hero-stage .hero-core img{width:38px;height:38px}
+  .hero-stage .orbit{width:225px;height:225px}
+  .hero-stage #hero-description{font-size:12px;line-height:1.4}
+}
+
 #planes .plan-includes{margin-top:24px;border-top:1px solid #7197ff35;border-bottom:1px solid #7197ff35}
 #planes .plan-includes>summary{min-height:52px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 16px;cursor:pointer;list-style:none;color:#f2fbff;background:#18324d;border:1px solid #7fcdff66;border-radius:8px;font-size:17px;font-weight:700}
 #planes .plan-includes>summary::-webkit-details-marker{display:none}
