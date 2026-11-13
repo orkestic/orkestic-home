@@ -45,8 +45,11 @@
 
 /* Compact, separated hero cards for narrow mobile browsers. */
 @media (max-width:767px){
-  .hero-stage{min-height:340px}
-  .hero-stage .hero-node{width:calc(50% - 9px);min-width:0;max-width:180px;gap:7px;padding:9px 8px;animation-duration:7s}
+  .hero-stage{min-height:390px}
+  .hero-stage .hero-node{width:calc(50% - 14px);min-width:0;max-width:175px;gap:7px;padding:9px 8px;animation-duration:7s}
+  .hero-stage .hero-node:nth-of-type(1),.hero-stage .hero-node:nth-of-type(2){top:7% !important}
+  .hero-stage .hero-node:nth-of-type(3),.hero-stage .hero-node:nth-of-type(4){top:68% !important}
+  .hero-stage .hero-core,.hero-stage .orbit{top:43%}
   .hero-stage .hero-node .node-icon{width:27px;height:27px;flex:0 0 27px;font-size:15px}
   .hero-stage .hero-node>span:last-child{min-width:0}
    .hero-stage .hero-node [class~="text-[10px]"]{font-size:clamp(8px,2.45vw,10px);line-height:1.15;letter-spacing:0}
