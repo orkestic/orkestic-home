@@ -535,6 +535,27 @@
 
     }
   </script>
-<script src="https://app.orkestic.com/widget.js" data-widget="90308589" async></script>
+<div id="orkestic-chat" style="position:fixed;right:20px;bottom:20px;z-index:9999">
+  <div id="orkestic-chat-window" hidden style="position:absolute;bottom:76px;right:0;width:min(380px,calc(100vw - 32px));height:min(580px,calc(100dvh - 115px));background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 50px #0008">
+    <iframe title="Asistente de Orkestic" data-src="https://app.orkestic.com/agents/90308589/embed" style="width:100%;height:100%;border:0" allow="clipboard-write"></iframe>
+  </div>
+  <button id="orkestic-chat-toggle" type="button" aria-label="Abrir asistente de Orkestic" aria-expanded="false" aria-controls="orkestic-chat-window" style="display:flex;align-items:center;justify-content:center;width:64px;height:64px;padding:5px;background:#071c45;border:2px solid #65d6ff;border-radius:50%;box-shadow:0 5px 22px #001b56aa;cursor:pointer">
+    <img src="https://paymegpt.com/objects/public/white-label-logos/36/1793250921497_Orkestic-icono-app-512.png" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:50%">
+  </button>
+</div>
+<script>
+  (() => {
+    const button = document.getElementById('orkestic-chat-toggle');
+    const panel = document.getElementById('orkestic-chat-window');
+    const frame = panel.querySelector('iframe');
+    button.addEventListener('click', () => {
+      const opening = panel.hidden;
+      if (opening && !frame.src) frame.src = frame.dataset.src;
+      panel.hidden = !opening;
+      button.setAttribute('aria-expanded', String(opening));
+      button.setAttribute('aria-label', opening ? 'Cerrar asistente de Orkestic' : 'Abrir asistente de Orkestic');
+    });
+  })();
+</script>
 </body>
 </html>
