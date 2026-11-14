@@ -9,6 +9,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#060b16">
+  <link rel="canonical" href="https://orkestic.com/">
+  <link rel="alternate" hreflang="es-MX" href="https://orkestic.com/">
+  <link rel="alternate" hreflang="en" href="https://orkestic.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://orkestic.com/">
   
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -372,8 +376,8 @@
           <div class="shrink-0"><p class="text-sm text-slate-200">Crea agentes con los mejores<br>modelos de IA del mundo.</p><p class="text-[11px] muted mt-2">Modelos disponibles según configuración.</p></div>
           <div class="marquee min-w-0 flex-1" aria-label="OpenAI, Claude, Gemini, Grok, Groq y DeepSeek">
             <div class="marquee-track">
-              <div class="model-set"><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="" loading="eager" decoding="async"><span>OpenAI</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/claude/D97757" alt="" loading="eager" decoding="async"><span>Claude</span></span><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/gemini-color.svg" alt="" loading="eager" decoding="async"><span>Gemini</span></span><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/grok.svg" alt="" loading="eager" decoding="async"><span>Grok</span></span><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/groq.svg" alt="" loading="eager" decoding="async"><span>Groq</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/deepseek/4D6BFE" alt="" loading="eager" decoding="async"><span>DeepSeek</span></span></div>
-              <div class="model-set" aria-hidden="true"><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/openai.svg" alt="" loading="eager" decoding="async"><span>OpenAI</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/claude/D97757" alt="" loading="eager" decoding="async"><span>Claude</span></span><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/gemini-color.svg" alt="" loading="eager" decoding="async"><span>Gemini</span></span><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/grok.svg" alt="" loading="eager" decoding="async"><span>Grok</span></span><span class="model-name"><img class="model-icon" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/groq.svg" alt="" loading="eager" decoding="async"><span>Groq</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/deepseek/4D6BFE" alt="" loading="eager" decoding="async"><span>DeepSeek</span></span></div>
+              <div class="model-set"><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/e5af9ab856dfc557.svg" alt="" loading="eager" decoding="async"><span>OpenAI</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/claude/D97757" alt="" loading="eager" decoding="async"><span>Claude</span></span><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/b469e241d92de518.svg" alt="" loading="eager" decoding="async"><span>Gemini</span></span><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/e8a39dbfa06df96a.svg" alt="" loading="eager" decoding="async"><span>Grok</span></span><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/cd9601da7d600719.svg" alt="" loading="eager" decoding="async"><span>Groq</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/deepseek/4D6BFE" alt="" loading="eager" decoding="async"><span>DeepSeek</span></span></div>
+              <div class="model-set" aria-hidden="true"><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/e5af9ab856dfc557.svg" alt="" loading="eager" decoding="async"><span>OpenAI</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/claude/D97757" alt="" loading="eager" decoding="async"><span>Claude</span></span><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/b469e241d92de518.svg" alt="" loading="eager" decoding="async"><span>Gemini</span></span><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/e8a39dbfa06df96a.svg" alt="" loading="eager" decoding="async"><span>Grok</span></span><span class="model-name"><img class="model-icon" src="https://app.orkestic.com/objects/quick-uploads/1981/cd9601da7d600719.svg" alt="" loading="eager" decoding="async"><span>Groq</span></span><span class="model-name"><img class="model-icon" src="https://cdn.simpleicons.org/deepseek/4D6BFE" alt="" loading="eager" decoding="async"><span>DeepSeek</span></span></div>
             </div>
           </div>
         </div>
@@ -584,7 +588,6 @@
     if(window.gsap&&window.ScrollTrigger){
       gsap.registerPlugin(ScrollTrigger);
       gsap.timeline({defaults:{duration:reduced.matches?0:.9,ease:'power3.out'}})
-        .from('.hero-intro',{autoAlpha:0,y:40})
         .from('.hero-title',{autoAlpha:0,y:48},.12)
         .from('.hero-copy',{autoAlpha:0,y:40},.26)
         .from('.hero-actions',{autoAlpha:0,y:40},.4)
