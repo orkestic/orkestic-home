@@ -78,3 +78,11 @@ footer { padding: 1.2rem 0; color: var(--muted); font-size: .9rem; }
 @media (max-width: 395px) {
   .comparison { grid-template-columns: 1fr; }
 }
+
+.card:has(.card-link) h3 { margin: 0; font-size: 1.05rem; }
+.card-link { display: flex; justify-content: space-between; gap: 1rem; padding: 1rem; color: var(--text); text-decoration: none; }
+.card-link span { color: var(--accent); }
+.card:has(.card-link:hover) { border-color: var(--accent); }
+.feature-table { width: 100%; border-collapse: collapse; overflow-wrap: anywhere; }
+.feature-table th, .feature-table td { padding: .65rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.feature-table thead { background: var(--panel); }
