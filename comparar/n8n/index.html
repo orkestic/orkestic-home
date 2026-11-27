@@ -23,7 +23,7 @@
     <p>Compara cómo se construye un flujo para registrar un prospecto, clasificarlo y enviarle una confirmación.</p>
   </div>
   <nav class="explore categories" aria-label="Contenido de la comparación">
-    <a href="#funciones">Funciones</a><a href="#ejemplo">Caso práctico</a><a href="#mcp">MCP</a><a href="#operacion">Operación</a><a href="#puntos-fuertes">Puntos fuertes</a><a href="#costos">Costos</a><a href="#migracion">Migración</a><a href="#preguntas">Preguntas frecuentes</a>
+    <a href="#funciones">Funciones</a><a href="#ejemplo">Caso práctico</a><a href="#mcp">MCP</a><a href="#operacion">Operación</a><a href="#puntos-fuertes">Cuándo elegir</a><a href="#costos">Precios</a><a href="#migracion">Cómo cambiar a Orkestic</a><a href="#preguntas">Preguntas frecuentes</a>
   </nav>
   <article class="catalog">
     <section id="funciones">
@@ -67,11 +67,17 @@
       <p>En n8n, revisa las ejecuciones y las credenciales de los servicios conectados. Si eliges una instalación propia, también administras su infraestructura. En Orkestic, el contacto y la etiqueta se gestionan en la plataforma. El envío de correo sigue dependiendo del remitente configurado.</p>
     </section>
     <section id="puntos-fuertes">
-      <h2>Puntos fuertes de n8n</h2>
-      <ul><li>Instalación propia para administrar la infraestructura y decidir dónde se ejecutan los flujos.</li><li>Nodos de código y transformaciones para integraciones que necesitan lógica a medida.</li></ul>
+      <h2>Cuándo n8n es la mejor opción</h2>
+      <ul>
+        <li><strong>Necesitas alojarlo en tu propia infraestructura.</strong> La edición de instalación propia te permite administrar los servidores y decidir dónde se procesan los datos.</li>
+<li><strong>Quieres consultar o modificar el código.</strong> n8n publica su código fuente. La licencia define qué usos y modificaciones permite.</li>
+<li><strong>Tu equipo escribe lógica a medida.</strong> Los nodos de código permiten usar JavaScript o Python para transformar datos y resolver pasos que requieren programación.</li>
+<li><strong>Conexión de herramientas existentes.</strong> Si el CRM, el correo y el sitio ya están resueltos, n8n puede encargarse de mover datos entre ellos sin sustituirlos.</li>
+      </ul>
+      <p><strong>Cuándo elegir Orkestic.</strong> Si quieres reunir formularios, clientes, agentes y automatizaciones en una plataforma con conexión MCP, evalúa el recorrido en Orkestic con los datos y canales que usas hoy.</p>
     </section>
     <section id="costos">
-      <h2>Planes y precios comparados</h2>
+      <h2>Comparación de precios</h2>
       <p>Precios de referencia al 26 de noviembre de 2026, en la moneda indicada. Las tarifas por usuario, créditos o ejecuciones se calculan según el volumen y la modalidad de facturación.</p>
       <p class="table-scroll-hint" id="precios-deslizar">Desliza la tabla hacia los lados para ver todas las columnas.</p>
       <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de planes y precios" aria-describedby="precios-deslizar">
@@ -94,8 +100,14 @@
       <p><a href="/?lang=es#planes">Ver planes de Orkestic</a> · <a href="https://n8n.io/pricing/">Consultar planes vigentes de n8n</a></p>
     </section>
     <section id="migracion">
-      <h2>Cómo trasladar un flujo de prospectos</h2>
-      <ol><li>Identifica el disparador, los campos, las etiquetas y el mensaje de confirmación.</li><li>Configura el recorrido equivalente con un contacto de prueba.</li><li>Comprueba que un reenvío del mismo formulario se gestione como esperas y que el correo llegue antes de cambiar el flujo en producción.</li></ol>
+      <h2>Cómo cambiar de n8n a Orkestic</h2>
+      <ol>
+        <li><strong>Haz un inventario.</strong> Revisa flujos activos, disparadores, acciones y rutas de error. Prioriza lo que ya está en producción.</li>
+        <li><strong>Prepara los datos.</strong> Exporta contactos, etiquetas y campos que use cada flujo si tu cuenta lo permite. Asigna los campos a su destino en Orkestic y conserva las preferencias de contacto cuando correspondan.</li>
+        <li><strong>Reconstruye el proceso prioritario.</strong> Configura los flujos prioritarios con el editor o con ayuda de un asistente conectado por MCP. Revisa qué permisos y conexiones necesita antes de publicarlo.</li>
+        <li><strong>Prueba antes de hacer el cambio.</strong> Verifica el registro de prueba, la confirmación y los reintentos en paralelo. Mantén el recorrido anterior operativo hasta confirmar el resultado.</li>
+        <li><strong>Cambia el punto de entrada.</strong> Activa el recorrido nuevo donde corresponda y retira únicamente el proceso anterior que ya hayas sustituido.</li>
+      </ol>
     </section>
     <section id="preguntas">
       <h2>Preguntas frecuentes</h2>
